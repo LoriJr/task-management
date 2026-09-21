@@ -19,9 +19,7 @@ public class TaskService {
     private final TaskMapper mapper;
 
     public TaskResponse addTask(TaskRequest request){
-        if(request == null){
-            throw new ValidationFieldsException("Fields is required");
-        }
+
 
         Task task = mapper.toEntity(request);
         task.setCreatedAt(LocalDate.now());

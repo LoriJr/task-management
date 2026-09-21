@@ -1,11 +1,12 @@
 package com.example.task_management.exceptions;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public record ErrorResponse(
         LocalDateTime stimestamp,
         int status,
-        String message,
+        List<String> message,
         String path
 ) {
 }

@@ -9,6 +9,8 @@ import com.example.task_management.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+
 @Service
 @RequiredArgsConstructor
 public class TaskService {
@@ -22,6 +24,7 @@ public class TaskService {
         }
 
         Task task = mapper.toEntity(request);
+        task.setCreatedAt(LocalDate.now());
 
         return mapper.toDto(repository.save(task));
     }

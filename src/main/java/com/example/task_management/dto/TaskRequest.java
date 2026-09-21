@@ -3,6 +3,7 @@ package com.example.task_management.dto;
 import com.example.task_management.enums.Priority;
 import com.example.task_management.enums.Status;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
@@ -17,13 +18,13 @@ public record TaskRequest(
         @Size(max = 500, message = "Description should be max 500 character")
         String description,
 
-        @NotBlank(message = "Status is required")
+        @NotNull(message = "Status is required")
         Status status,
 
-        @NotBlank(message = "Priority is required")
+        @NotNull(message = "Priority is required")
         Priority priority,
 
-        @NotBlank(message = "EndDate is required")
+        @NotNull(message = "EndDate is required")
         LocalDate endDate
 ) {
 }

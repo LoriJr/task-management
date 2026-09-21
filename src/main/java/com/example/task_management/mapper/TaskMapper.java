@@ -5,6 +5,11 @@ import com.example.task_management.dto.TaskRequest;
 import com.example.task_management.dto.TaskResponse;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
 @Component
 public class TaskMapper {
 

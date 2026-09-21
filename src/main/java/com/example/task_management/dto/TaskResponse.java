@@ -1,13 +1,17 @@
 package com.example.task_management.dto;
 
+import com.example.task_management.enums.Priority;
 import com.example.task_management.enums.Status;
 
 import java.time.LocalDate;
 
-public record TarefaRequest(
+public record TaskResponse(
+        Long id,
         String title,
         String description,
         Status status,
-        LocalDate endDate
-) {
+        Priority priority,
+        LocalDate endDate,
+        LocalDate createdAt
+){
 }

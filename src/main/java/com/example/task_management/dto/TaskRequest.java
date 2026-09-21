@@ -5,13 +5,11 @@ import com.example.task_management.enums.Status;
 
 import java.time.LocalDate;
 
-public record TarefaResponse (
-        Long id,
+public record TaskRequest(
         String title,
         String description,
         Status status,
         Priority priority,
-        LocalDate endDate,
-        LocalDate createdAt
-){
+        LocalDate endDate
+) {
 }

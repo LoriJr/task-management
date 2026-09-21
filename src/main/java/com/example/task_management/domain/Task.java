@@ -20,8 +20,9 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
+    private String description;
     private Status status;
     private Priority priority;
     private LocalDate endDate;
-    private LocalDate startDate;
+    private LocalDate createdAt;
 }
